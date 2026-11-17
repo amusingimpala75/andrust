@@ -19,7 +19,7 @@ dependencies:
   - openssh
 
 registry:
-  nixpkgs: github:nixos/nixos-unstable
+  nixpkgs: github:nixos/nixpkgs/nixos-unstable
 
 environment:
   GIT_REMOTE_REPO: "git@github.com:amusingimpala75/andrust.git"
