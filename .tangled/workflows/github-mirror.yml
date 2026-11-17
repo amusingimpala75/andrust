@@ -8,15 +8,18 @@ when:
   - event: ["push", "manual"]
     branch: ["trunk"]
 
-engine: nixery
+engine: microvm
+image: nixos
 
 clone:
   depth: 0
 
 dependencies:
-  nixpkgs:
-    - git
-    - openssh
+  - git
+  - openssh
+
+registry:
+  nixpkgs: github:nixos/nixos-unstable
 
 environment:
   GIT_REMOTE_REPO: "git@github.com:amusingimpala75/andrust.git"
