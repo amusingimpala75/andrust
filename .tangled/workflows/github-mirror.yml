@@ -11,9 +11,6 @@ when:
 engine: microvm
 image: nixos
 
-clone:
-  depth: 0
-
 dependencies:
   - git
   - openssh
@@ -50,4 +47,5 @@ steps:
       git config user.name "amusingimpala75"
       git config user.email "69653100+amusingimpala75@users.noreply.github.com"
       git remote add mirror "${GIT_REMOTE_REPO}"
-      git push --no-thin --force mirror "HEAD:refs/heads/${TANGLED_REF_NAME}"
+      git fetch --unshallow origin
+      git push --force mirror "HEAD:refs/heads/${TANGLED_REF_NAME}"
